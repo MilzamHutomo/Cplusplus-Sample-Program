@@ -6,38 +6,43 @@ int main(){
 
     bool symmetric = true;
 
-    int size;
+    int x,y;
     cout << "Determine matrix size: ";
-    cin >> size;
+    cin >> x >> y;
 
-    int matrix[size][size];
+    int matrix[x][y];
 
-    for(int i=0; i<size; i++){
-        for(int j=0; j<size; j++){
+    for(int i=0; i<x; i++){
+        for(int j=0; j<y; j++){
             cin >> matrix[i][j];
         }
     }
-
-    for(int i=0; i<size; i++){
-        for(int j=0; j<size; j++){
-            if( matrix[i][j] != matrix[j][i] ){
-                if(symmetric){
-                    symmetric = false;
-                    cout << "Matrix not symmetric" << endl;
-                }
-                //Display which coordinate that make the matrix not symmetric
-                if(!symmetric){
-                    cout << "[" << i << "][" << j << "]" << "not equal with [" << j << "][" << i << "]" << endl;
-                    /**
-                    Alternative
-                    cout << "[" << i << "][" << j << "]" << endl;
-                    **/
+    
+    if( x == y ){
+        for(int i=0; i<size; i++){
+            for(int j=0; j<size; j++){
+                if( matrix[i][j] != matrix[j][i] ){
+                    if(symmetric){
+                        symmetric = false;
+                    }
+                    //Display which coordinate that make the matrix not symmetric
+                    if(!symmetric){
+                        cout << "[" << i << "][" << j << "]" << "not equal with [" << j << "][" << i << "]" << endl;
+                        /**
+                        Alternative
+                        cout << "[" << i << "][" << j << "]" << endl;
+                        **/
+                    }
                 }
             }
         }
-    }
+    }else simetric = false;
+    
     if(symmetric){
         cout << "Matrix symmetric" << endl;
+    }else{
+        cout << "Matrix not symmetric" << endl;
     }
+    
     cout << "Finished" << endl;
 }
