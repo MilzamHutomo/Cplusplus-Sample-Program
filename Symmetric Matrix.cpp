@@ -27,7 +27,11 @@ int main(){
                 }
                 //Display which coordinate that make the matrix not symmetric
                 if(!symmetric){
-                    cout << "[" << i << "][" << j << "]" << "not equal with [" << i << "][" << j << "]" << endl;
+                    cout << "[" << i << "][" << j << "]" << "not equal with [" << j << "][" << i << "]" << endl;
+                    /**
+                    Alternative
+                    cout << "[" << i << "][" << j << "]" << endl;
+                    **/
                 }
             }
         }
