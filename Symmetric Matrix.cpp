@@ -6,7 +6,6 @@ int main(){
 
     bool symmetric = true;
 
-    //Bonus 1; 5 poin
     int size;
     cout << "Determine matrix size: ";
     cin >> size;
@@ -26,7 +25,7 @@ int main(){
                     symmetric = false;
                     cout << "Matrix not symmetric" << endl;
                 }
-                // Bonus 2; 20 poin
+                //Display which coordinate that make the matrix not symmetric
                 if(!symmetric){
                     cout << "[" << i << "][" << j << "]" << "not equal with [" << i << "][" << j << "]" << endl;
                 }
@@ -34,7 +33,7 @@ int main(){
         }
     }
     if(symmetric){
-        cout << "Matriks symmetric" << endl;
+        cout << "Matrix symmetric" << endl;
     }
     cout << "Finished" << endl;
 }
