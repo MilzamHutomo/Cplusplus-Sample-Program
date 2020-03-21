@@ -42,6 +42,8 @@ int main(){
             cipherMatrix[i][j] = plainText[plainTextIter];
             plainTextIter++;
             if( plainTextIter > plainText.length()-1 ){
+                //If the matrix column is bigger than the length of the plaintext
+                //The rest of the column will filled with letter from the beginning of the plaintext
                 plainTextIter = 0;
             }
         }
@@ -64,6 +66,7 @@ int main(){
                 for( int k=0; k < matrixRow; k++ ){
                     cipher << cipherMatrix[k][j];
                 }
+                //Remove compared letter in the key to prevent duplicate comparasion
                 keyOrigin[j] = NULL;
                 break;
             }
